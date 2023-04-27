@@ -47,12 +47,12 @@ Route::post('/categoryAdd', [CategoryController::class, 'store'])->middleware(['
 // Item
 // Create
 Route::get('/item-add', [ItemController::class, 'create'])->middleware(['auth', 'isAdmin']);
-Route::post('/itemAdd', [itemController::class, 'store'])->middleware(['auth', 'isAdmin']);
+Route::post('/itemAdd', [ItemController::class, 'store'])->middleware(['auth', 'isAdmin']);
 // Read
 Route::get('/item-list', [ItemController::class, 'view'])->middleware(['auth', 'isAdmin']);
 // Update
 Route::get('/item-edit/{id}', [ItemController::class, 'edit'])->middleware(['auth', 'isAdmin']);
-Route::put('/itemUpdate/{id}', [itemController::class, 'update'])->middleware(['auth', 'isAdmin']);
+Route::put('/itemUpdate/{id}', [ItemController::class, 'update'])->middleware(['auth', 'isAdmin']);
 // Delete
 Route::get('/item-delete/{id}', [ItemController::class, 'delete'])->middleware(['auth', 'isAdmin']);
 Route::delete('/itemDelete/{id}', [ItemController::class, 'destroy'])->middleware(['auth', 'isAdmin']);
